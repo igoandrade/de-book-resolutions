@@ -11,11 +11,8 @@ openpyxl
 pandas
 pandas-datareader
 Pillow
-pingouin
 plotly
 pygooglenews
-requests
-sagemath
 scipy
 seaborn
 selenium
@@ -27,4 +24,3 @@ urllib3
 wordcloud
 xlrd
 yfinance
-scikit-learn
