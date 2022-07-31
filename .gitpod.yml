@@ -2,8 +2,24 @@ image:
   file: .gitpod.Dockerfile
   
 tasks:
-  - command: Rscript requirements.R
+  - init: |
+      python -m venv venv
+      source venv/bin/activate
+      pip install --upgrade pip wheel setuptools
+      pip install -r requirements.txt
+  - command: |
+      source venv/bin/activate
+      Rscript requirements.R
   
 vscode:
   extensions:
-    - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q==
+    - ms-toolsai.jupyter
+    - ms-python.python
+    - Ikuyadeu.r
+    - reditorsupport.r-lsp
+    - vscode-icons-team.vscode-icons
+    - ritwickdey.liveserver
+    - james-yu.latex-workshop
+    - dracula-theme.theme-dracula
+    - enkia.tokyo-night
+    - ritwickdey.LiveServer
